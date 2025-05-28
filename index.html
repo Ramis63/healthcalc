@@ -1,27 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>HealthCalc - Your BMI Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #232946;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 540px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 2px 18px #b6ccfe45;
+            padding: 38px 26px 30px 26px;
+            text-align: center;
+        }
+        h1 {
+            color: #233ab6;
+            margin-bottom: 6px;
+            font-size: 2.4rem;
+        }
+        h2 {
+            color: #3d77ff;
+            margin-top: 30px;
+            margin-bottom: 9px;
+            font-size: 1.4rem;
+        }
+        p {
+            font-size: 1.08rem;
+            margin-bottom: 18px;
+        }
+        .button-row {
+            margin: 28px 0 18px 0;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(90deg, #4062ff 50%, #3e9fff 100%);
+            box-shadow: 0 2px 8px #bdd8ff30;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            text-decoration: none;
+            margin-bottom: 6px;
+        }
+        .download-btn:hover {
+            background: linear-gradient(90deg, #2b40c5 60%, #4062ff 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        ul {
+            text-align: left;
+            padding-left: 24px;
+            font-size: 1rem;
+        }
+        .github-link {
+            color: #225eff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .github-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7a819c;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 3vw;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 40px;">
-    <h1>HealthCalc 🩺</h1>
-    <p>A simple and fast command-line BMI calculator built with Rust.</p>
+<body>
+    <div class="container">
+        <h1>HealthCalc 🩺</h1>
+        <p>
+            <b>HealthCalc</b> is a fast, privacy-friendly command-line tool for calculating your BMI (Body Mass Index) and getting instant health tips.
+            <br>
+            Built for speed and simplicity, it runs offline and collects no data.
+        </p>
 
-    <h2>Features</h2>
-    <ul>
-        <li>Calculates your BMI</li>
-        <li>Gives your health category</li>
-        <li>Shares helpful tips based on your BMI</li>
-    </ul>
+        <div class="button-row">
+            <a class="download-btn" href="https://github.com/ramis63/healthcalc/releases/latest/download/healthcalc-windows.exe" target="_blank">Download for Windows</a>
+            <a class="download-btn" href="https://github.com/ramis63/healthcalc/releases/latest/download/healthcalc-macos" target="_blank">Download for Mac</a>
+            <a class="download-btn" href="https://github.com/ramis63/healthcalc/releases/latest/download/healthcalc-linux" target="_blank">Download for Linux</a>
+        </div>
 
-    <h2>How to Use</h2>
-    <pre>
-1. Download the binary
-2. Open terminal
-3. Run: ./healthcalc
-    </pre>
+        <h2>How to Use</h2>
+        <ul>
+            <li>Download and save the file for your system above.</li>
+            <li>Open your terminal or command prompt.</li>
+            <li>Run the HealthCalc tool:<br>
+                <b>Windows:</b> <code>healthcalc-windows.exe</code><br>
+                <b>Mac/Linux:</b> <code>./healthcalc-macos</code> or <code>./healthcalc-linux</code>
+            </li>
+            <li>Follow the on-screen instructions.</li>
+        </ul>
 
-    <h2>View on GitHub</h2>
-    <p><a href="https://github.com/ramis63/healthcalc" target="_blank">https://github.com/ramis63/healthcalc</a></p>
+        <h2>Features</h2>
+        <ul>
+            <li>Instant BMI calculation</li>
+            <li>Health category detection (underweight, normal, overweight, obese)</li>
+            <li>Personalized health tips</li>
+            <li>Fast and 100% offline</li>
+        </ul>
+
+        <h2>Open Source</h2>
+        <p>
+            <a class="github-link" href="https://github.com/ramis63/healthcalc" target="_blank">View source code and instructions on GitHub</a>
+        </p>
+    </div>
+    <footer>
+        Inspired by <a href="https://batwls.github.io/smart_file_analyzer/" target="_blank" style="color:#4e70c8;">Smart File Analyzer</a> &mdash; © 2024 HealthCalc by Ramis
+    </footer>
 </body>
 </html>
+
+
