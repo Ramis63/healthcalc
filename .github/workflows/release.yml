@@ -3,7 +3,9 @@ name: Build Linux Binary
 on:
   release:
     types: [published]
-
+permissions:
+  contents: write
+  packages: write
 jobs:
   build-linux:
     runs-on: ubuntu-latest
